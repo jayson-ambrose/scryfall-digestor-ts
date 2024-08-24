@@ -1,4 +1,5 @@
 import { ChangeEvent, MouseEvent, useState } from 'react'
+import { Input } from './ui/input'
 
 export default function Searchbar({ runSearch }: 
     { runSearch: (searchCritera: string, query: string) => void }) {
@@ -25,11 +26,9 @@ export default function Searchbar({ runSearch }:
       <select onChange={handleChangeSearchCriteria}>
         <option value=''>Name</option>
         <option value='s:'>Set</option>
-        <option value='t:'>Type</option>
-        <option value='r:'>Rarity</option>
         <option value='a:'>Artist</option>
       </select>
-      <input
+      <Input
         type='text'
         className='border border-gray-300 rounded-lg p-2'
         placeholder={'Search for a card...'}
